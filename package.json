@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs --debug",
-    "build": "vuepress build docs",
-    "docs:dev": "vuepress dev docs --debug",
-    "docs:build": "vuepress build docs"
+    "dev": "set NODE_OPTIONS = --openssl-legacy-provider &&  node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs --debug",
+    "build": "set NODE_OPTIONS = --openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js build docs"
   },
   "repository": {
     "type": "git",
