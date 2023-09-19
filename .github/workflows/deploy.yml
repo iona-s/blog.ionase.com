@@ -32,15 +32,24 @@ jobs:
           yarn install
           yarn build
 
-      - name: ssh deploy
-        uses: easingthemes/ssh-deploy@main
+      - name: FTP deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avzr --delete'
-          SOURCE: './dist'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.REMOTE_TARGET }}
+          server: ${{ secrets.FTP_SERVER }}部署时
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+
+      # - name: ssh deploy
+      #   uses: easingthemes/ssh-deploy@main
+      #   with:
+      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     ARGS: '-avzr --delete'
+      #     SOURCE: './dist'
+      #     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+      #     REMOTE_USER: ${{ secrets.REMOTE_USER }}
+      #     TARGET: ${{ secrets.REMOTE_TARGET }}
 
         # 同步到又拍云
       # - name: Deploy upyun
