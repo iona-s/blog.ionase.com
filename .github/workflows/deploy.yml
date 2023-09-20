@@ -46,7 +46,7 @@ jobs:
       #   with:
       #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       #     ARGS: '-avzr --delete'
-      #     SOURCE: './dist'
+      #     SOURCE: './dist/'
       #     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
       #     REMOTE_USER: ${{ secrets.REMOTE_USER }}
       #     TARGET: ${{ secrets.REMOTE_TARGET }}
@@ -57,8 +57,9 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          source: './dist'
+          source: './dist/'
           target: ${{ secrets.REMOTE_TARGET }}
+          overwrite: true
 
         # 同步到又拍云
       # - name: Deploy upyun
