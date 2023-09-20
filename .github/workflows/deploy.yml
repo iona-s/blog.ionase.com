@@ -62,7 +62,7 @@ jobs:
           target: ${{ secrets.REMOTE_TARGET }}
           # windowsserver自带的tar不支持--overwrite
           # overwrite: true
-          rm: true # 只能每次删了，暂时这样处理
+          # rm: true # 只能每次删了，暂时这样处理
 
         # 同步到又拍云
       # - name: Deploy upyun
