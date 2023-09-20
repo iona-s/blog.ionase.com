@@ -59,7 +59,9 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           source: './dist/'
           target: ${{ secrets.REMOTE_TARGET }}
-          overwrite: true
+          # windowsserver自带的tar不支持--overwrite
+          # overwrite: true
+          rm: true # 只能每次删了，暂时这样处理
 
         # 同步到又拍云
       # - name: Deploy upyun
