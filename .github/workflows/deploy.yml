@@ -58,7 +58,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           # password: ${{ secrets.SSH_PASSWORD }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: './dist'
+          source: './dist/'
           target: ${{ secrets.REMOTE_TARGET }}
           # windowsserver自带的tar不支持--overwrite
           # overwrite: true
