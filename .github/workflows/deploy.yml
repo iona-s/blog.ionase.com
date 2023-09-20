@@ -51,12 +51,13 @@ jobs:
       #     REMOTE_USER: ${{ secrets.REMOTE_USER }}
       #     TARGET: ${{ secrets.REMOTE_TARGET }}
 
-      - name: copy file via ssh password
+      - name: copy file via ssh
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_PASSWORD }}
+          # password: ${{ secrets.SSH_PASSWORD }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: './dist/'
           target: ${{ secrets.REMOTE_TARGET }}
           # windowsserver自带的tar不支持--overwrite
