@@ -90,7 +90,7 @@ export default <VdoingThemeConfig>{
     // 页脚信息, 请根据实际情况修改, 删掉不需要的部分
     createYear: 2023, // 博客创建年份
     copyrightInfo: `
-      <a href="http://beian.miit.gov.cn/" target="_blank">暂无备案号</a>
+      <a href="http://beian.miit.gov.cn/" target="_blank">鄂ICP备2023017519号-1</a>
     `, // 博客版权信息，支持a标签
   },
 };
