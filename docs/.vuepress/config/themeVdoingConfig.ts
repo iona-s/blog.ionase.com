@@ -90,7 +90,16 @@ export default <VdoingThemeConfig>{
     // 页脚信息, 请根据实际情况修改, 删掉不需要的部分
     createYear: 2023, // 博客创建年份
     copyrightInfo: `
-      <a href="http://beian.miit.gov.cn/" target="_blank">鄂ICP备2023017519号-1</a>
+      <style>.beian-text{height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;}</style>
+      <div style="width:210px;margin:0 auto">
+      <a href="http://beian.miit.gov.cn/" target="_blank">
+      <p class=beian-text>鄂ICP备2023017519号-1</p>
+      </a>
+      <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61011302001769">
+        <img src="/assets/img/gonganbeian.png" style="float:left;"/>
+        <p class=beian-text>陕公网安备 61011302001769号</p>
+      </a>
+      </div>
     `, // 博客版权信息，支持a标签
   },
 };
