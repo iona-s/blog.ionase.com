@@ -9,7 +9,11 @@ export default <Array<NavItem>>[
     items: [
       {
         text: "Python",
-        link: "/pages/59e41f/",
+        link: "/Catalogue/python/",
+      },
+      {
+        text: "镜像汇总",
+        link: "/Catalogue/mirrors/",
       },
     ],
   },
