@@ -9,7 +9,7 @@ export default <Array<NavItem>>[
     items: [
       {
         text: "Python",
-        link: "/python/",
+        link: "/pages/59e41f/",
       },
     ],
   },
