@@ -9,7 +9,7 @@ export default <VdoingThemeConfig>{
   nav: nav, // 上方导航栏配置, 如需修改请修改 nav.ts
   sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
   logo: "/assets/img/logo.png", // 导航栏Logo
-  repo: "Ninsplay/blog.ionase.com", // 导航栏右侧生成Github链接
+  repo: "iona-s/blog.ionase.com", // 导航栏右侧生成Github链接
   searchMaxSuggestions: 10, // 搜索结果显示最大数
   lastUpdated: "上次更新", // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
   docsDir: "docs", // 编辑的文件夹
@@ -77,7 +77,7 @@ export default <VdoingThemeConfig>{
       {
         iconClass: "icon-github",
         title: "GitHub",
-        link: "https://github.com/Ninsplay/blog.ionase.com",
+        link: "https://github.com/iona-s/blog.ionase.com",
       },
       {
         iconClass: "icon-youjian",
@@ -96,7 +96,7 @@ export default <VdoingThemeConfig>{
       <p class=beian-text>鄂ICP备2023017519号-1</p>
       </a>
       <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61011302001769">
-        <img src="/assets/img/gonganbeian.png" style="float:left;"/>
+        <img src="/assets/img/gonganbeian.png" style="float:left;" alt="公安备案"/>
         <p class=beian-text>陕公网安备 61011302001769号</p>
       </a>
       </div>
